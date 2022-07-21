@@ -11,7 +11,7 @@ from random import choice
 #removing duplication?
 #goal is so that in the future we only need to update some concept in one place
 #so we aren't able to forget to update all the places 
-
+valid_choices = ["rock", "paper", "scissors"]
 
 u = input("Please choose one of 'Rock', 'Paper', or 'Scissors': ").lower()
 print("USER CHOICE:", u)
@@ -22,7 +22,7 @@ if u not in valid_choices:
 #
 # COMPUTER SELECTION
 #
-valid_choices = ["rock", "paper", "scissors"]
+
 c = choice(valid_choices)
 print("COMPUTER CHOICE:", c)
 
