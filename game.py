@@ -13,40 +13,49 @@ from random import choice
 #so we aren't able to forget to update all the places 
 valid_choices = ["rock", "paper", "scissors"]
 
-u = input("Please choose one of 'Rock', 'Paper', or 'Scissors': ").lower()
-print("USER CHOICE:", u)
-if u not in valid_choices:
-    print("OOPS, TRY AGAIN")
-    exit()
+def winner(user_choice, computer_choice):
+    return "OOPS - TODO"
 
-#
-# COMPUTER SELECTION
-#
+#ONLY RUN THE FOLLOWING CODE IF WE RUN THE SCRIPT FROM THE COMMAND LIN
+#BUT NOT IF WE ARE IMPORTING SOME CODE FROM THIS FILE TO ANOTHER FILE
+#PREVENTS EXECUTION OF THE CODE BELOW WHEN ALL WE WANT TO DO IS TEST ONE ISOLATED PART
+if __name__ == "__main__":
 
-c = choice(valid_choices)
-print("COMPUTER CHOICE:", c)
+    u = input("Please choose one of 'Rock', 'Paper', or 'Scissors': ").lower()
+    print("USER CHOICE:", u)
+    if u not in valid_choices:
+       return "OOPS, TRY AGAIN"
+        exit()
 
-#
-# DETERMINATION OF WINNER
-#
+    #
+    # COMPUTER SELECTION
+    #
 
-if u == "rock" and c == "rock":
-    print("It's a tie!")
-elif u == "rock" and c == "paper":
-    print("The computer wins")
-elif u == "rock" and c == "scissors":
-    print("The user wins")
+    c = choice(valid_choices)
+    return "COMPUTER CHOICE:"
 
-elif u == "paper" and c == "rock":
-    print("The computer wins")
-elif u == "paper" and c == "paper":
-    print("It's a tie!")
-elif u == "paper" and c == "scissors":
-    print("The user wins")
+    #
+    # DETERMINATION OF WINNER
+    #
 
-elif u == "scissors" and c == "rock":
-    print("The computer wins")
-elif u == "scissors" and c == "paper":
-    print("The user wins")
-elif u == "scissors" and c == "scissors":
-    print("It's a tie!")
+    if user_choice == "rock" and computer_choice == "rock":
+        return "It's a tie!"
+    elif user_choice == "rock" and computer_choice == "paper":
+        return "The computer wins"
+    elif user_choice == "rock" and computer_choice == "scissors":
+        return "The user wins"
+
+    elif user_choice == "paper" and computer_choice == "rock":
+        return "The computer wins"
+    elif user_choice == "paper" and computer_choice == "paper":
+        return "It's a tie!"
+    elif user_choice == "paper" and computer_choice == "scissors":
+        #return "The user wins" bug 
+         return "The computer wins"
+
+    elif user_choice == "scissors" and computer_choice == "rock":
+        return "The computer wins"
+    elif user_choice == "scissors" and computer_choice == "paper":
+        return "The user wins"
+    elif user_choice == "scissors" and computer_choice == "scissors":
+        return "It's a tie!"
